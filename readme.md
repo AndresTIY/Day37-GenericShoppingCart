@@ -32,7 +32,7 @@ Use React/Redux to Create a Shopping Cart App
 ////////////////////////////////////////////////////////////////
 [ ] Component: Cart
 - [X] Container Component
-- [ ] Responsible for Dispatching Actions
+- [X] Responsible for Dispatching Actions
 - [X] Responsible for Fetching data from server
 - [X] Create Fake Server Data, api.js
 - [ ] Passes info to it's children in CartItem
@@ -42,13 +42,10 @@ Use React/Redux to Create a Shopping Cart App
 
 [ ] Reducer
 - [ ] Items Array
-what should this look like?
-items = [{ball: 5}, {cheetos: 100}, {paper: 2}]
-only way to pair items with price that I can think of
-- [ ] Total in State
-- [ ] Add Item Action
+- [X] Total in State
+- [X] Add Item Action
 - [ ] Remove Item Action
-- [ ] Add Total based on Cart Inventory
+- [X] Add Total based on Cart Inventory
 - Global State: Items Being Purchased, Total Cost
 
 ////////////////////////////////////////////////////////////////

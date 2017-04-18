@@ -1,20 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Route, Link, NavLink } from 'react-router-dom'
-import container from '../containers/all.js'
-import Shopping from './shopping_view.js'
-import Cart from './cart_view.js'
+import React from "react";
+import { connect } from "react-redux";
+import { Route, Link, NavLink } from "react-router-dom";
+import container from "../containers/all.js";
+import Cart from "./cart_view.js";
 
 class AppRoot extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
-  onHeaderClicked ({ history }) {
-    return <h1 onClick={() => history.push('/contact-us')}>Whoa!</h1>
+  onHeaderClicked({ history }) {
+    return <h1 onClick={() => history.push("/contact-us")}>Whoa!</h1>;
   }
 
-  render () {
+  render() {
     return (
       <main>
         <Cart />
@@ -23,4 +22,4 @@ class AppRoot extends React.Component {
   }
 }
 
-export default connect(container.allState)(AppRoot)
+export default connect(container.allState)(AppRoot);

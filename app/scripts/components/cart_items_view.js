@@ -1,32 +1,29 @@
 //display items in tabular format
 //display total cost
-import React from 'react'
+import React from "react";
+import allState from "../containers/all.js";
+import { connect } from "react-redux";
+import container from "../containers/all.js";
 
 class CartItems extends React.Component {
-  render () {
+  render() {
     return (
-      <div className="cart-items">
-        <p>Cart</p>
-          <table>
-            <tbody>
-              <tr>
-                <th>Item</th>
-                <th>Price</th>
-              </tr>
-              <tr>
-                <td>Wine</td>
-                <td>6.99</td>
-              </tr>
-              <tr>
-                <th>Total</th>
-                <th>$25</th>
-              </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <tbody>
+        {this.props.cart.map((item, i) => {
+          return (
+            <tr key={i}>
+              <td>{item.singleItem}</td>
+              <td>{item.singlePrice}</td>
+            </tr>
+          );
+        })}
+        <tr>
+          <th>Total</th>
+          <th>{this.props.totalCost}</th>
+        </tr>
+      </tbody>
     );
   }
 }
 
-export default CartItems
+export default connect(container.allState)(CartItems);
