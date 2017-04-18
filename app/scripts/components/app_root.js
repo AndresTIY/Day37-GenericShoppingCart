@@ -2,19 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Link, NavLink } from 'react-router-dom'
 import container from '../containers/all.js'
-
-
-const NavBar = () => {
-  return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      <br />
-      <NavLink to="/about">About</NavLink>
-      <br />
-      <NavLink to="/contact-us">Contact Them</NavLink>
-    </nav>
-  )
-}
+import Shopping from './shopping_view.js'
 
 class AppRoot extends React.Component {
   constructor (props) {
@@ -28,10 +16,7 @@ class AppRoot extends React.Component {
   render () {
     return (
       <main>
-        <NavBar/>
-        <section>
-          <Route render={this.onHeaderClicked} />
-        </section>
+        <Shopping />
       </main>
     );
   }

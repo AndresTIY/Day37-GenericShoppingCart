@@ -3,13 +3,12 @@
 //add/remove item actions
 //adds total
 
-const initialState = {
-  items: [],
-  totalCost: null
-}
 export default function AppReducer (state, action) {
   if (state === undefined) {
-    return initialState;
+    return {
+      items: [],
+      totalCost: null
+    };
 
 
     switch(action.type){

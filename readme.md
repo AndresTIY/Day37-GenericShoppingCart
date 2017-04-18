@@ -19,18 +19,23 @@ Use React/Redux to Create a Shopping Cart App
 - Need to generate a list of items available for sale. Hard Coded first and then moved to backendless
 
 #### Plan and Checklist
-[ ] Component: Cart
-- [ ] Container Component
-- [ ] Responsible for Dispatching Actions
-- [ ] Responsible for Fetching data from server
-- [ ] Passes info to it's children in CartItem
-
-////////////////////////////////////////////////////////////////
-
 
 [ ] Component: Cart Item
 - [ ] Display: Items in tabular format
 - [ ] Display: Total Cost
+
+[ ] Component: Shopping View
+- [ ] Display Items for Sale
+- [ ] Add Cart Item Button
+- [ ] Remove Cart Item Button
+
+////////////////////////////////////////////////////////////////
+[ ] Component: Cart
+- [ ] Container Component
+- [ ] Responsible for Dispatching Actions
+- [ ] Responsible for Fetching data from server
+- [X] Create Fake Server Data, api.js
+- [ ] Passes info to it's children in CartItem
 
 ////////////////////////////////////////////////////////////////
 
@@ -53,4 +58,5 @@ only way to pair items with price that I can think of
 
 #### Current Challenges and Questions
 - Since Cart is a Container Component, is it not the same as a View Component? Instructions say yes. Only Cart Items is displaying
+
 - Should reducer, line 3, return empty object or return initialState?
