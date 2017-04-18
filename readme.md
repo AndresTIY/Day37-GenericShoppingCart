@@ -33,7 +33,7 @@ Use React/Redux to Create a Shopping Cart App
 [ ] Component: Cart
 - [X] Container Component
 - [ ] Responsible for Dispatching Actions
-- [ ] Responsible for Fetching data from server
+- [X] Responsible for Fetching data from server
 - [X] Create Fake Server Data, api.js
 - [ ] Passes info to it's children in CartItem
 
@@ -58,3 +58,4 @@ only way to pair items with price that I can think of
 
 #### Current Challenges and Questions
 - Styling Table Data, <tbody> vs <table>
+- Dispatch not defined. What needs to be connected?

@@ -4,7 +4,10 @@
 import React from 'react'
 import CartItems from './cart_items_view.js'
 import api from '../api.js'
-//gets server data
+import allState from '../containers/all.js'
+import store from '../store.js'
+import { connect } from 'react-redux'
+import container from '../containers/all.js'
 
 
 
@@ -23,21 +26,25 @@ class Cart extends React.Component {
 }
 
 export default Cart
+
 //////////////////////////////////////////////////////////////////
 class Shopping extends React.Component {
   constructor(props){
     super(props)
 
-    this.addItem = this.addItem.bind(this)
-    this.removeItem = this.removeItem.bind(this)
 
   }
 
-  addItem(){
-    console.log('add button clicks')
+  addItem(item) {
+    store.dispatch({type:"ADD_ITEM",
+      item: {singleItem: item.item,
+            singlePrice: item.price}
+    })
   }
+
   removeItem(){
     console.log('remove button clicks')
+    //removes item from global state cart
   }
 
   render () {
@@ -48,8 +55,8 @@ class Shopping extends React.Component {
           <div className="item-display" key={i}>
             <p>{item.item}</p>
             <p>${item.price}</p>
-            <button onClick={this.addItem}>Add</button>
-            <button onClick={this.removeItem}>Remove</button>
+            <button onClick={this.addItem.bind(this, item)}>Add</button>
+            <button onClick={this.removeItem.bind(this, item)}>Remove</button>
           </div>
         )
         })}
