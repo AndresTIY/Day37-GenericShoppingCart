@@ -44,10 +44,13 @@ only way to pair items with price that I can think of
 - [ ] Add Item Action
 - [ ] Remove Item Action
 - [ ] Add Total based on Cart Inventory
+- Global State: Items Being Purchased, Total Cost
 
 ////////////////////////////////////////////////////////////////
 
 
 
 
-#### Current Challenges
+#### Current Challenges and Questions
+- Since Cart is a Container Component, is it not the same as a View Component? Instructions say yes. Only Cart Items is displaying
+- Should reducer, line 3, return empty object or return initialState?
