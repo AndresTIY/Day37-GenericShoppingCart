@@ -6,19 +6,19 @@
 export default function AppReducer(state, action) {
   if (state === undefined) {
     return {
-      items: [],
-      totalCost: null
+      cart: [],
+      totalCost: 0
     };
   }
 
   switch (action.type) {
     case "ADD_ITEM":
-      var newItem = state.items.slice();
-
+      var newItem = state.cart.slice();
+      var price = action.item.singlePrice;
       newItem.push(action.item);
-
       return Object.assign({}, state, {
-        items: newItem
+        cart: newItem,
+        totalCost: state.totalCost + price
       });
     // case: "REMOVE_ITEM":
     // case: "TOTAL_COST":
