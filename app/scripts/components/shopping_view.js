@@ -11,8 +11,8 @@ class Shopping extends React.Component {
           <div className="item-display" key={i}>
             <p>{item.item}</p>
             <p>${item.price}</p>
-            <button>Add To Cart</button>
-            <button>Remove From Cart</button>
+            <button>Add</button>
+            <button>Remove</button>
           </div>
         )
         })}

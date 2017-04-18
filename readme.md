@@ -24,10 +24,10 @@ Use React/Redux to Create a Shopping Cart App
 - [ ] Display: Items in tabular format
 - [ ] Display: Total Cost
 
-[ ] Component: Shopping View
-- [ ] Display Items for Sale
-- [ ] Add Cart Item Button
-- [ ] Remove Cart Item Button
+[X] Component: Shopping View
+- [X] Display Items for Sale
+- [X] Add Cart Item Button
+- [X] Remove Cart Item Button
 
 ////////////////////////////////////////////////////////////////
 [ ] Component: Cart

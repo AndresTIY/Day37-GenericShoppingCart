@@ -5,22 +5,26 @@ import React from 'react'
 class CartItems extends React.Component {
   render () {
     return (
-      <div>
-      <table>
-        <tr>
-          <th>Item</th>
-          <th>Price</th>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-        </tr>
-      </table>
+      <div className="cart-items">
+        <p>Cart</p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>Wine</td>
+                <td>6.99</td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <th>$25</th>
+              </tr>
+          </tbody>
+        </table>
       </div>
+
     );
   }
 }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Route, Link, NavLink } from 'react-router-dom'
 import container from '../containers/all.js'
 import Shopping from './shopping_view.js'
+import Cart from './cart_view.js'
 
 class AppRoot extends React.Component {
   constructor (props) {
@@ -17,6 +18,7 @@ class AppRoot extends React.Component {
     return (
       <main>
         <Shopping />
+        <Cart />
       </main>
     );
   }

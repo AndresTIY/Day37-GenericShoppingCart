@@ -1,0 +1,15 @@
+.cart-items{
+  border: 1px solid $color-veryDarkBlue;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  table {
+    margin: 0 auto;
+  }
+
+
+  td {
+    border: 1px dotted $color-veryDarkBlue;
+  }
+}
