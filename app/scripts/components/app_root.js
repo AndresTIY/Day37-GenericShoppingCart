@@ -17,7 +17,6 @@ class AppRoot extends React.Component {
   render () {
     return (
       <main>
-        <Shopping />
         <Cart />
       </main>
     );

@@ -20,9 +20,9 @@ Use React/Redux to Create a Shopping Cart App
 
 #### Plan and Checklist
 
-[ ] Component: Cart Item
-- [ ] Display: Items in tabular format
-- [ ] Display: Total Cost
+[X] Component: Cart Item
+- [X] Display: Items in tabular format
+- [X] Display: Total Cost
 
 [X] Component: Shopping View
 - [X] Display Items for Sale
@@ -31,7 +31,7 @@ Use React/Redux to Create a Shopping Cart App
 
 ////////////////////////////////////////////////////////////////
 [ ] Component: Cart
-- [ ] Container Component
+- [X] Container Component
 - [ ] Responsible for Dispatching Actions
 - [ ] Responsible for Fetching data from server
 - [X] Create Fake Server Data, api.js
@@ -57,6 +57,4 @@ only way to pair items with price that I can think of
 
 
 #### Current Challenges and Questions
-- Since Cart is a Container Component, is it not the same as a View Component? Instructions say yes. Only Cart Items is displaying
-
-- Should reducer, line 3, return empty object or return initialState?
+- Styling Table Data, <tbody> vs <table>
