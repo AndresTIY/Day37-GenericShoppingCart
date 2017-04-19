@@ -30,21 +30,21 @@ Use React/Redux to Create a Shopping Cart App
 - [X] Remove Cart Item Button
 
 ////////////////////////////////////////////////////////////////
-[ ] Component: Cart
+[X] Component: Cart
 - [X] Container Component
 - [X] Responsible for Dispatching Actions
 - [X] Responsible for Fetching data from server
 - [X] Create Fake Server Data, api.js
-- [ ] Passes info to it's children in CartItem
+- [X] Passes info to it's children in CartItem
 
 ////////////////////////////////////////////////////////////////
 
 
-[ ] Reducer
-- [ ] Items Array
+[X] Reducer
+- [X] Items Array
 - [X] Total in State
 - [X] Add Item Action
-- [ ] Remove Item Action
+- [X] Remove Item Action
 - [X] Add Total based on Cart Inventory
 - Global State: Items Being Purchased, Total Cost
 
@@ -54,5 +54,7 @@ Use React/Redux to Create a Shopping Cart App
 
 
 #### Current Challenges and Questions
-- Styling Table Data, <tbody> vs <table>
-- Dispatch not defined. What needs to be connected?
+
+- add item works fine
+- remove item removes all items of the same name but only the price of single item
+- uploaded data to backendless but having trouble retrieving data/ran out of time

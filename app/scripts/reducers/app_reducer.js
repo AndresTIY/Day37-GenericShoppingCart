@@ -6,6 +6,7 @@
 export default function AppReducer(state, action) {
   if (state === undefined) {
     return {
+      store: [],
       cart: [],
       totalCost: 0
     };
@@ -18,11 +19,31 @@ export default function AppReducer(state, action) {
       newItem.push(action.item);
       return Object.assign({}, state, {
         cart: newItem,
-        totalCost: state.totalCost + price
+        totalCost: Number((state.totalCost + price).toFixed(2))
       });
-    // case: "REMOVE_ITEM":
-    // case: "TOTAL_COST":
 
+    case "REMOVE_ITEM":
+      var itemToRemove = action.item.singleItem;
+      var priceToSubtract = action.item.singlePrice;
+      var newCart = state.cart.filter(item => {
+        return item.singleItem !== itemToRemove;
+      });
+      if (state.totalCost <= 0) {
+        return Object.assign({}, state, {
+          cart: newCart,
+          totalCost: 0
+        });
+      } else {
+        return Object.assign({}, state, {
+          cart: newCart,
+          totalCost: Number((state.totalCost - priceToSubtract).toFixed(2))
+        });
+      }
+
+    case "LOAD_DATA":
+      return Object.assign({}, state, {
+        store: action.data
+      });
 
     default:
       console.debug("Unhandled State");

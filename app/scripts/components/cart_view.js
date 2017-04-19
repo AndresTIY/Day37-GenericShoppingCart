@@ -8,6 +8,7 @@ import allState from "../containers/all.js";
 import store from "../store.js";
 import { connect } from "react-redux";
 import container from "../containers/all.js";
+import loadData from "../actions/load_data.js";
 
 class Cart extends React.Component {
   render() {
@@ -26,7 +27,6 @@ class Cart extends React.Component {
 }
 
 export default Cart;
-// <CartItems />
 
 //////////////////////////////////////////////////////////////////
 class Shopping extends React.Component {
@@ -44,9 +44,14 @@ class Shopping extends React.Component {
     });
   }
 
-  removeItem() {
-    console.log("remove button clicks");
-    //removes item from global state cart
+  removeItem(item) {
+    store.dispatch({
+      type: "REMOVE_ITEM",
+      item: {
+        singleItem: item.item,
+        singlePrice: item.price
+      }
+    });
   }
 
   render() {
