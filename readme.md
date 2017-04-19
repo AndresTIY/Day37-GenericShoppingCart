@@ -30,6 +30,7 @@ Use React/Redux to Create a Shopping Cart App
 - [X] Remove Cart Item Button
 
 ////////////////////////////////////////////////////////////////
+
 [X] Component: Cart
 - [X] Container Component
 - [X] Responsible for Dispatching Actions
@@ -46,7 +47,7 @@ Use React/Redux to Create a Shopping Cart App
 - [X] Add Item Action
 - [X] Remove Item Action
 - [X] Add Total based on Cart Inventory
-- Global State: Items Being Purchased, Total Cost
+- [X] Global State: Items Being Purchased, Total Cost
 
 ////////////////////////////////////////////////////////////////
 
@@ -55,6 +56,6 @@ Use React/Redux to Create a Shopping Cart App
 
 #### Current Challenges and Questions
 
-- add item works fine
-- remove item removes all items of the same name but only the price of single item
-- uploaded data to backendless but having trouble retrieving data/ran out of time
+- The "Remove Item" button removes all items of the same name instead of a single item.
+- "Remove Item" Only removes single price. If there are multiples of the same item, they all get removed but only one price get's subtracted from the cost
+- Uploaded data to backendless but having trouble retrieving data/ran out of time
